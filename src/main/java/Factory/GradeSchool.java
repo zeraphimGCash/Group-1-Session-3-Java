@@ -27,7 +27,7 @@ class HighSchool extends StudentFactory{
 
     protected void showme()
     {
-        System.out.println("GradeSchool ID: " + this.hschoolId );
+        System.out.println("HighSchool  ID: " + this.hschoolId );
     }
 }
 
@@ -43,6 +43,6 @@ class College extends StudentFactory{
 
     protected void showme()
     {
-        System.out.println("GradeSchool ID: " + this.cschoolId);
+        System.out.println("College     ID: " + this.cschoolId);
     }
 }
