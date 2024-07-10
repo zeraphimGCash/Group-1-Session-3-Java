@@ -1,4 +1,4 @@
-package com.designpatterns.FactoryExample;
+package Factory;
 
 class GradeSchool extends StudentFactory{
 
@@ -27,7 +27,7 @@ class HighSchool extends StudentFactory{
 
     protected void showme()
     {
-        System.out.println("GradeSchool ID: " + this.hschoolId);
+        System.out.println("GradeSchool ID: " + this.hschoolId );
     }
 }
 
