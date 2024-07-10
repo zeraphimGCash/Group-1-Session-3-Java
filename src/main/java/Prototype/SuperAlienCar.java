@@ -10,6 +10,7 @@ public class SuperAlienCar extends SuperCarPlan {
         this.alienDriver = name;
     }
     public void getDetails() {
+
         System.out.println("driver name is " + this.alienDriver);
     }
     public String toString(){
