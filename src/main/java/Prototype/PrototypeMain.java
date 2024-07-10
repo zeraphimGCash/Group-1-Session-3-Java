@@ -19,6 +19,7 @@ class PrototypeMain {
             int Exiter = 0;
             while (Exiter == 0) {
                 SuperAlienPhone S2 = (SuperAlienPhone) S1.getClone();
+                userInput1 = whichOption();
                 if (userInput1.equalsIgnoreCase("yes")) {
                     S2.getDetailsCoolPhone();
                 }

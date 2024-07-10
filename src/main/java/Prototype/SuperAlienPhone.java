@@ -5,10 +5,27 @@ import java.util.Scanner;
 public class SuperAlienPhone extends SuperPhoneModel {
     private String phone;
     private String alienPhone = "Apple"; // by default
+    private String[][] phoneDetails = {};
 
     public SuperAlienPhone() {
         this.phone = DatabasePhone.getPhone();// costly operation
-        System.out.println("This is not a clone.");
+        this.phoneDetails = new String[][]{
+                {"iPhone 15", "iPhone 15 Pro", "iPhone 15 Pro Max"},
+                {"64GB", "128GB", "256GB", "512GB"},
+                {"Black", "White", "Red", "Blue"},
+                {"Samsung Galaxy S24", "Samsung Galaxy S24 Ultra", "Samsung Galaxy Z Fold6"},
+                {"128GB", "256GB", "512GB"},
+                {"Phantom Gray", "Phantom White", "Phantom Pink", "Phantom Silver"},
+                {"Nokia 3310", "Nokia 105", "Nokia 150"},
+                {"8MB", "4MB", "16MB"},
+                {"Black", "Blue", "Red", "Yellow"},
+                {"Samsung Guru", "Samsung Metro", "Samsung Keystone"},
+                {"2MB", "4MB", "8MB"},
+                {"Black", "White", "Blue"},
+                {"Motorola F3", "Motorola W175", "Motorola C168"},
+                {"2MB", "4MB", "8MB"},
+                {"Black", "Silver", "Red"}
+        };
     }
     public void setPhone(String name) {
         this.alienPhone = name;
@@ -26,14 +43,7 @@ public class SuperAlienPhone extends SuperPhoneModel {
         System.out.println("Phone Brand: " + this.alienPhone);
 
         // Arrays for phone details
-        String[][] phoneDetails = {
-                {"iPhone 15", "iPhone 15 Pro", "iPhone 15 Pro Max"},
-                {"64GB", "128GB", "256GB", "512GB"},
-                {"Black", "White", "Red", "Blue"},
-                {"Samsung Galaxy S24", "Samsung Galaxy S24 Ultra", "Samsung Galaxy Z Fold6"},
-                {"128GB", "256GB", "512GB"},
-                {"Phantom Gray", "Phantom White", "Phantom Pink", "Phantom Silver"}
-        };
+
         int modelIndex = -1, storageIndex = -1, colorIndex = -1;
 
         if (this.alienPhone.equals("Apple")) {
@@ -79,34 +89,23 @@ public class SuperAlienPhone extends SuperPhoneModel {
         System.out.println("Phone Brand: " + this.alienPhone);
 
         // Arrays for phone details
-        String[][] phoneDetails = {
-                {"Nokia 3310", "Nokia 105", "Nokia 150"},
-                {"8MB", "4MB", "16MB"},
-                {"Black", "Blue", "Red", "Yellow"},
-                {"Samsung Guru", "Samsung Metro", "Samsung Keystone"},
-                {"2MB", "4MB", "8MB"},
-                {"Black", "White", "Blue"},
-                {"Motorola F3", "Motorola W175", "Motorola C168"},
-                {"2MB", "4MB", "8MB"},
-                {"Black", "Silver", "Red"}
-        };
+
         int modelIndex = -1, storageIndex = -1, colorIndex = -1;
 
         if (this.alienPhone.equals("Nokia")) {
-            modelIndex = 0;
-            storageIndex = 1;
-            colorIndex = 2;
-        }
-        else if (this.alienPhone.equals("Samsung")) {
-            modelIndex = 3;
-            storageIndex = 4;
-            colorIndex = 5;
-        }
-        else if (this.alienPhone.equals("Motorola")){
             modelIndex = 6;
             storageIndex = 7;
             colorIndex = 8;
-
+        }
+        else if (this.alienPhone.equals("Samsung")) {
+            modelIndex = 9;
+            storageIndex = 10;
+            colorIndex = 11;
+        }
+        else if (this.alienPhone.equals("Motorola")){
+            modelIndex = 12;
+            storageIndex = 13;
+            colorIndex = 14;
         }
 
         // Check if a valid phone brand was entered
