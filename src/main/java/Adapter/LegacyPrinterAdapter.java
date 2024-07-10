@@ -12,15 +12,7 @@ class LegacyPrinterAdapter implements PaymentGateway {
     @Override
     public void processPayment(double amount, String currency) {
         // Adapt the payment processing logic
-        legacyPrinter.initialize();
         legacyPrinter.printDocument();
-
-        CurrencyConverter converter = new CurrencyConverter() {
-            @Override
-            double convertToPHP(double amount) {
-                return 0;
-            }
-        };
 
         // Convert the amount to PHP based on currency type
         double convertedAmount;
@@ -35,7 +27,7 @@ class LegacyPrinterAdapter implements PaymentGateway {
                 // Handle other currency types (if needed)
                 convertedAmount = amount;
         }
-
-        System.out.println("Payment processed for ₱" + convertedAmount);
+        System.out.println("Payment processed for ₱" + convertedAmount + " from " + currency + " " + amount);
+        System.out.println("=".repeat(60));
     }
 }
