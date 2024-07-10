@@ -20,6 +20,15 @@ public class AdapterMain {
 
             paymentGateway.processPaymentEURO(100.0);
 
+            // Other Service Requests
+            OtherRequests otherRequests = new OtherRequests();
+
+            System.out.println("SERVICE WITHOUT INPUT");
+            paymentGateway.processPaymentUSD(otherRequests.ServiceWithoutInput());
+
+            System.out.println("SERVICE WITH INPUT");
+            paymentGateway.processPaymentUSD(otherRequests.ServiceWithInput());
+
         }
         catch(Exception e){
             System.out.println("Error found:" + e);
