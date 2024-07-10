@@ -15,8 +15,9 @@ public class StudentFactory {
                 return new HighSchool();
 
             case COLLEGE:
-                return new College():
+                return new College();
         }
+
     }
 
     void showme(){
