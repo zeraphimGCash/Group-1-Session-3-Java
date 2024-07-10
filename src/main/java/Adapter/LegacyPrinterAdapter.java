@@ -10,6 +10,7 @@ class LegacyPrinterAdapter implements PaymentGateway {
     @Override
     public void processPayment(double amount) {
         // Adapt the payment processing logic
+        legacyPrinter.initialize();
         legacyPrinter.printDocument();
         System.out.println("Payment processed for ₱" + amount);
     }
