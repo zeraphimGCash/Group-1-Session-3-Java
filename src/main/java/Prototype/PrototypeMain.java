@@ -1,17 +1,21 @@
 package Prototype;
 
+
+
 class PrototypeMain {
     public static void main(String[] args) {
         try {
             SuperAlienPhone S1 = new SuperAlienPhone();
             S1.getDetails();
-            System.out.println(S1);
+            S1.phoneSpecs();
             System.out.println();
 
             SuperAlienPhone S2 = (SuperAlienPhone) S1.getClone();
-            S2.setDriver("Grab");
+            S2.setPhone("Samsung");
             S2.getDetails();
-            System.out.println(S2);
+            S2.phoneSpecs();
+            System.out.println();
+
 
         } catch (Exception e) {
             System.out.println("whatsup");
