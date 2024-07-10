@@ -14,13 +14,6 @@ class LegacyPrinterAdapter implements PaymentGateway {
         // Adapt the payment processing logic
         legacyPrinter.printDocument();
 
-        CurrencyConverter converter = new CurrencyConverter() {
-            @Override
-            double convertToPHP(double amount) {
-                return 0;
-            }
-        };
-
         // Convert the amount to PHP based on currency type
         double convertedAmount;
         switch (currency) {
