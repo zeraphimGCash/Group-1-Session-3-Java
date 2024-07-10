@@ -14,11 +14,20 @@ public class AdapterMain {
             System.out.println();
 
             // Process payment using the adapted interface
-            paymentGateway.processPayment(100.0, "PHP");
+            paymentGateway.processPaymentPHP(100.0);
 
-            paymentGateway.processPayment(100.0, "USD");
+            paymentGateway.processPaymentUSD(100.0);
 
-            paymentGateway.processPayment(100.0, "EURO");
+            paymentGateway.processPaymentEURO(100.0);
+
+            // Other Service Requests
+            OtherRequests otherRequests = new OtherRequests();
+
+            System.out.println("SERVICE WITHOUT INPUT");
+            paymentGateway.processPaymentUSD(otherRequests.ServiceWithoutInput());
+
+            System.out.println("SERVICE WITH INPUT");
+            paymentGateway.processPaymentUSD(otherRequests.ServiceWithInput());
 
         }
         catch(Exception e){
