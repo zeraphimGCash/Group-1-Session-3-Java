@@ -1,8 +1,8 @@
-package com.designpatterns.FactoryExample;
+package Factory;
 
 public class StudentFactory {
     enum studentType{
-        GRADESCHOOL, HIGHSCHOOL, COLLEGE;
+        GRADESCHOOL, HIGHSCHOOL, COLLEGE
     }
 
     static StudentFactory createStudent(studentType student) throws Exception{
@@ -16,8 +16,10 @@ public class StudentFactory {
 
             case COLLEGE:
                 return new College();
-        }
 
+            default:
+                throw new Exception("This student type is not yet supported");
+        }
     }
 
     void showme(){

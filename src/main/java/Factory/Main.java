@@ -1,4 +1,4 @@
-package com.designpatterns.FactoryExample;
+package Factory;
 
 public class Main {
 }
