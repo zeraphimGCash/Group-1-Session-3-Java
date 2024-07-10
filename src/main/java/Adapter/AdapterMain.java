@@ -16,7 +16,7 @@ public class AdapterMain {
 
         }
         catch(Exception e){
-            System.out.println("whatsup");
+            System.out.println("Error found:" + e);
         }
     }
 }
