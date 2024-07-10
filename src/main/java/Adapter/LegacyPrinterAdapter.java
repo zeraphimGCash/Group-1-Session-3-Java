@@ -10,24 +10,38 @@ class LegacyPrinterAdapter implements PaymentGateway {
     }
 
     @Override
-    public void processPayment(double amount, String currency) {
+    public void processPaymentPHP(double amount) {
         // Adapt the payment processing logic
         legacyPrinter.printDocument();
 
         // Convert the amount to PHP based on currency type
-        double convertedAmount;
-        switch (currency) {
-            case "USD":
-                convertedAmount = amount * 58.33;
-                break;
-            case "EURO":
-                convertedAmount = amount * 63.10;
-                break;
-            default:
-                // Handle other currency types (if needed)
-                convertedAmount = amount;
-        }
-        System.out.println("Payment processed for ₱" + convertedAmount + " from " + currency + " " + amount);
+        double convertedAmount = amount;
+
+        System.out.println("Payment processed for ₱" + convertedAmount + " from PHP " + amount);
+        System.out.println("=".repeat(60));
+    }
+
+    @Override
+    public void processPaymentUSD(double amount) {
+        // Adapt the payment processing logic
+        legacyPrinter.printDocument();
+
+        // Convert the amount to PHP based on currency type
+        double convertedAmount = amount * 58.33;
+
+        System.out.println("Payment processed for ₱" + convertedAmount + " from USD " + amount);
+        System.out.println("=".repeat(60));
+    }
+
+    @Override
+    public void processPaymentEURO(double amount) {
+        // Adapt the payment processing logic
+        legacyPrinter.printDocument();
+
+        // Convert the amount to PHP based on currency type
+        double convertedAmount = amount * 63.10;
+
+        System.out.println("Payment processed for ₱" + convertedAmount + " from EURO " + amount);
         System.out.println("=".repeat(60));
     }
 }

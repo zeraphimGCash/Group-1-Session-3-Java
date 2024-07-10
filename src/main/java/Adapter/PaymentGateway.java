@@ -1,5 +1,7 @@
 package Adapter;
 
 public interface PaymentGateway {
-    void processPayment(double amount, String currency);
+    void processPaymentPHP(double amount);
+    void processPaymentUSD(double amount);
+    void processPaymentEURO(double amount);
 }
