@@ -1,4 +1,4 @@
-# Group 3 Session 3 Java ☕️
+# Group 1 Springboot Development Session 3 ☕️
 
 ## Members:
 - Cabahug: Factory Design Pattern
