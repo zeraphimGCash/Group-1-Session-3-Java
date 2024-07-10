@@ -12,7 +12,6 @@ class LegacyPrinterAdapter implements PaymentGateway {
     @Override
     public void processPayment(double amount, String currency) {
         // Adapt the payment processing logic
-        legacyPrinter.initialize();
         legacyPrinter.printDocument();
 
         CurrencyConverter converter = new CurrencyConverter() {
@@ -36,6 +35,6 @@ class LegacyPrinterAdapter implements PaymentGateway {
                 convertedAmount = amount;
         }
 
-        System.out.println("Payment processed for ₱" + convertedAmount);
+        System.out.println("Payment processed for ₱" + convertedAmount + " from " + currency);
     }
 }

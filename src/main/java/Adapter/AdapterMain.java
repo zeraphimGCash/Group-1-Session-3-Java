@@ -12,7 +12,11 @@ public class AdapterMain {
             PaymentGateway paymentGateway = new LegacyPrinterAdapter(legacyPrinter);
 
             // Process payment using the adapted interface
+            paymentGateway.processPayment(100.0, "PHP");
+
             paymentGateway.processPayment(100.0, "USD");
+
+            paymentGateway.processPayment(100.0, "EURO");
 
         }
         catch(Exception e){
