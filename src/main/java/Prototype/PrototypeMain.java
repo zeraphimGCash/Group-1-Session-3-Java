@@ -3,12 +3,12 @@ package Prototype;
 class PrototypeMain {
     public static void main(String[] args) {
         try {
-            SuperAlienCar S1 = new SuperAlienCar();
+            SuperAlienPhone S1 = new SuperAlienPhone();
             S1.getDetails();
             System.out.println(S1);
             System.out.println();
 
-            SuperAlienCar S2 = (SuperAlienCar) S1.getClone();
+            SuperAlienPhone S2 = (SuperAlienPhone) S1.getClone();
             S2.setDriver("Grab");
             S2.getDetails();
             System.out.println(S2);

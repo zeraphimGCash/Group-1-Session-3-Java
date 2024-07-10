@@ -1,19 +1,22 @@
 package Prototype;
 
-public class SuperAlienCar extends SuperPhoneModel {
+public class SuperAlienPhone extends SuperPhoneModel {
     private String phone;
-    private String alienDriver = "Lalamove"; // by default
-    public SuperAlienCar() {
+    private String alienPhone = "Lalamove"; // by default
+    public SuperAlienPhone() {
+
         this.phone = DatabasePhone.getPhone(); // costly operation
     }
     public void setDriver(String name) {
-        this.alienDriver = name;
+
+        this.alienPhone = name;
     }
     public void getDetails() {
 
-        System.out.println("driver name is " + this.alienDriver);
+        System.out.println("driver name is " + this.alienPhone);
     }
     public String toString(){
+
         return "test";
     }
 }
