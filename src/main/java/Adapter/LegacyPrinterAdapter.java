@@ -34,7 +34,7 @@ class LegacyPrinterAdapter implements PaymentGateway {
                 // Handle other currency types (if needed)
                 convertedAmount = amount;
         }
-
-        System.out.println("Payment processed for ₱" + convertedAmount + " from " + currency);
+        System.out.println("Payment processed for ₱" + convertedAmount + " from " + currency + " " + amount);
+        System.out.println("=".repeat(60));
     }
 }

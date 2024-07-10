@@ -11,6 +11,8 @@ public class AdapterMain {
 
             PaymentGateway paymentGateway = new LegacyPrinterAdapter(legacyPrinter);
 
+            System.out.println();
+
             // Process payment using the adapted interface
             paymentGateway.processPayment(100.0, "PHP");
 
