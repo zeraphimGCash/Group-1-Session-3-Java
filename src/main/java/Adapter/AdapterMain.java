@@ -1,11 +1,22 @@
 package Adapter;
 
+// PaymentGateway serves as the target interface
+// LegacyPrinter represents the existing system with a legacy printing method.
+// LegacyPrinterAdapter adapts the LegacyPrinter to the PaymentGateway interface.
+
 public class AdapterMain {
     public static void main(String[] args) {
-        LegacyPrinter legacyPrinter = new LegacyPrinter();
-        PaymentGateway paymentGateway = new LegacyPrinterAdapter(legacyPrinter);
+        try {
+            LegacyPrinter legacyPrinter = new LegacyPrinter();
 
-        // Process payment using the adapted interface
-        paymentGateway.processPayment(100.0);
+            PaymentGateway paymentGateway = new LegacyPrinterAdapter(legacyPrinter);
+
+            // Process payment using the adapted interface
+            paymentGateway.processPayment(100.0);
+
+        }
+        catch(Exception e){
+            System.out.println("whatsup");
+        }
     }
 }
