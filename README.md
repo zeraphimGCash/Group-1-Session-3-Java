@@ -1,4 +1,4 @@
-# Group 3 Session 3 Java
+# Group 3 Session 3 Java ☕️
 
 ## Members:
 - Cabahug: Factory Design Pattern
