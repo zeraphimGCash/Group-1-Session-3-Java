@@ -1,16 +1,16 @@
 package Prototype;
 
-public abstract class SuperCarPlan implements Cloneable
+public abstract class SuperPhoneModel implements Cloneable
 {
     public Object getClone() {
-        Object car = null;
+        Object phone = null;
         try{
-            car = super.clone();
+            phone = super.clone();
         }
         catch (CloneNotSupportedException e)
         {
             e.printStackTrace();
         }
-        return car;
+        return phone;
     }
 }

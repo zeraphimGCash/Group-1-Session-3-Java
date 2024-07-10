@@ -1,10 +1,10 @@
 package Prototype;
 
-public class SuperAlienCar extends SuperCarPlan {
-    private String planet;
+public class SuperAlienCar extends SuperPhoneModel {
+    private String phone;
     private String alienDriver = "Lalamove"; // by default
     public SuperAlienCar() {
-        this.planet = DatabasePlanet.getPlanet(); // costly operation
+        this.phone = DatabasePhone.getPhone(); // costly operation
     }
     public void setDriver(String name) {
         this.alienDriver = name;

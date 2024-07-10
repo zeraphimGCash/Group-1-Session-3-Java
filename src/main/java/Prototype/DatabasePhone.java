@@ -1,8 +1,8 @@
 package Prototype;
 
-public class DatabasePlanet
+public class DatabasePhone
 {
-    protected static String getPlanet() {
+    protected static String getPhone() {
         System.out.println("This operation took one minute.");
         return "Mars";
     }
